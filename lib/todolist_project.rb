@@ -1,6 +1,4 @@
-# This class represents a todo item and its associated
-# data: name and description. There's also a "done"
-# flag to show whether this todo item is done.
+require 'bundler/setup'
 
 class Todo
   DONE_MARKER = 'X'
@@ -36,10 +34,6 @@ class Todo
       done == otherTodo.done
   end
 end
-
-# This class represents a collection of Todo objects.
-# You can perform typical collection-oriented actions
-# on a TodoList object, including iteration and selection.
 
 class TodoList
   attr_accessor :title
@@ -127,7 +121,6 @@ class TodoList
     list
   end
 
-  # returns first Todo by title, or nil if no match
   def find_by_title(title)
     select { |todo| todo.title == title }.first
   end
